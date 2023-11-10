@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.minseo.callbank.view.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_join1Fragment"
+            app:destination="@id/join1Fragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/join1Fragment"
+        android:name="com.minseo.callbank.view.login.Join1Fragment"
+        android:label="Join1Fragment"
+        tools:layout="@layout/fragment_join1">
+        <action
+            android:id="@+id/action_join1Fragment_to_join2Fragment"
+            app:destination="@id/join2Fragment" />
+        <action
+            android:id="@+id/action_join1Fragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/join2Fragment"
+        android:name="com.minseo.callbank.view.login.Join2Fragment"
+        android:label="Join2Fragment"
+        tools:layout="@layout/fragment_join2">
+        <action
+            android:id="@+id/action_join2Fragment_to_join3Fragment"
+            app:destination="@id/join3Fragment" />
+        <action
+            android:id="@+id/action_join2Fragment_to_join1Fragment"
+            app:destination="@id/join1Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/join3Fragment"
+        android:name="com.minseo.callbank.view.login.Join3Fragment"
+        android:label="Join3Fragment"
+        tools:layout="@layout/fragment_join3">
+        <action
+            android:id="@+id/action_join3Fragment_to_join4Fragment"
+            app:destination="@id/join4Fragment" />
+        <action
+            android:id="@+id/action_join3Fragment_to_join2Fragment"
+            app:destination="@id/join2Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/join4Fragment"
+        android:name="com.minseo.callbank.view.login.Join4Fragment"
+        android:label="Join4Fragment"
+        tools:layout="@layout/fragment_join4">
+        <action
+            android:id="@+id/action_join4Fragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.minseo.callbank.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_speechRecognition"
+            app:destination="@id/speechRecognition" />
+        <action
+            android:id="@+id/action_mainFragment_to_mapActivity"
+            app:destination="@id/mapActivity" />
+        <action
+            android:id="@+id/action_mainFragment_to_send1Fragment"
+            app:destination="@id/send1Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_accountList1Fragment"
+            app:destination="@id/accountList1Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/speechRecognition"
+        android:name="com.minseo.callbank.view.speech.SpeechRecognition"
+        android:label="SpeechRecognition"
+        tools:layout="@layout/speech_recognition">
+        <action
+            android:id="@+id/action_speechRecognition_to_speechRecognition2"
+            app:destination="@id/speechRecognition2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/speechRecognition2"
+        android:name="com.minseo.callbank.view.speech.SpeechRecognition2"
+        android:label="SpeechRecognition2"
+        tools:layout="@layout/speech_recognition2"/>
+
+    <activity
+        android:id="@+id/mapActivity"
+        android:name="com.minseo.callbank.view.map.MapActivity"
+        android:label="MapFragment"
+        tools:layout="@layout/activity_map"/>
+
+    <fragment
+        android:id="@+id/send1Fragment"
+        android:name="com.minseo.callbank.view.send.Send1Fragment"
+        android:label="Send1Fragment"
+        tools:layout="@layout/fragment_send1">
+        <action
+            android:id="@+id/action_send1Fragment_to_send2Fragment"
+            app:destination="@id/send2Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send2Fragment"
+        android:name="com.minseo.callbank.view.send.Send2Fragment"
+        android:label="Send2Fragment"
+        tools:layout="@layout/fragment_send2">
+        <action
+            android:id="@+id/action_send2Fragment_to_send3Fragment"
+            app:destination="@id/send3Fragment" />
+        <action
+            android:id="@+id/action_send2Fragment_to_send1Fragment"
+            app:destination="@id/send1Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send3Fragment"
+        android:name="com.minseo.callbank.view.send.Send3Fragment"
+        android:label="Send3Fragment"
+        tools:layout="@layout/fragment_send3">
+        <action
+            android:id="@+id/action_send3Fragment_to_send4Fragment"
+            app:destination="@id/send4Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send4Fragment"
+        android:name="com.minseo.callbank.view.send.Send4Fragment"
+        android:label="Send4Fragment"
+        tools:layout="@layout/fragment_send4">
+        <action
+            android:id="@+id/action_send4Fragment_to_send5Fragment"
+            app:destination="@id/send5Fragment" />
+        <action
+            android:id="@+id/action_send4Fragment_to_send3Fragment"
+            app:destination="@id/send3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/send5Fragment"
+        android:name="com.minseo.callbank.view.send.Send5Fragment"
+        android:label="Send5Fragment"
+        tools:layout="@layout/fragment_send5">
+        <action
+            android:id="@+id/action_send5Fragment_to_send6Fragment"
+            app:destination="@id/send6Fragment" />
+        <action
+            android:id="@+id/action_send5Fragment_to_send4Fragment"
+            app:destination="@id/send4Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send6Fragment"
+        android:name="com.minseo.callbank.view.send.Send6Fragment"
+        android:label="Send6Fragment"
+        tools:layout="@layout/fragment_send6">
+        <action
+            android:id="@+id/action_send6Fragment_to_send7Fragment"
+            app:destination="@id/send7Fragment" />
+        <action
+            android:id="@+id/action_send6Fragment_to_send5Fragment"
+            app:destination="@id/send5Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send7Fragment"
+        android:name="com.minseo.callbank.view.send.Send7Fragment"
+        android:label="Send7Fragment"
+        tools:layout="@layout/fragment_send7">
+        <action
+            android:id="@+id/action_send7Fragment_to_send8Fragment"
+            app:destination="@id/send8Fragment" />
+        <action
+            android:id="@+id/action_send7Fragment_to_send6Fragment"
+            app:destination="@id/send6Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send8Fragment"
+        android:name="com.minseo.callbank.view.send.Send8Fragment"
+        android:label="Send8Fragment"
+        tools:layout="@layout/fragment_send8">
+        <action
+            android:id="@+id/action_send8Fragment_to_send9Fragment"
+            app:destination="@id/send9Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send9Fragment"
+        android:name="com.minseo.callbank.view.send.Send9Fragment"
+        android:label="Send9Fragment"
+        tools:layout="@layout/fragment_send9">
+        <action
+            android:id="@+id/action_send9Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountList1Fragment"
+        android:name="com.minseo.callbank.view.account.AccountList1Fragment"
+        android:label="AccountList1Fragment"
+        tools:layout="@layout/fragment_account_list1">
+        <action
+            android:id="@+id/action_accountList1Fragment_to_accountList2Fragment"
+            app:destination="@id/accountList2Fragment" />
+        <action
+            android:id="@+id/action_accountList1Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountList2Fragment"
+        android:name="com.minseo.callbank.view.account.AccountList2Fragment"
+        android:label="AccountList2Fragment"
+        tools:layout="@layout/fragment_account_list2">
+        <action
+            android:id="@+id/action_accountList2Fragment_to_accountList1Fragment"
+            app:destination="@id/accountList1Fragment" />
+    </fragment>
+
+</navigation>

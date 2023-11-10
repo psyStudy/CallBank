@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="send4"
+            type="com.minseo.callbank.view.send.Send4Fragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_before"
+            style="@style/textHeadline1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="받으실 분의 은행을\n눌러주세요"
+            android:lineSpacingExtra="-5dp"
+            android:textAlignment="center"
+            android:layout_marginBottom="35dp"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/tv_after"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="35dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textHeadline1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="이 은행이 맞다면"
+                android:layout_marginBottom="-7dp"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textHeadline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_green"
+                    android:text="계속" />
+
+                <TextView
+                    style="@style/textHeadline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="을 눌러주세요" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--    신한, 하나, 수협, 기업, 카카오, 국민, 농협, 우체국, 새마을, 우리 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_height="400dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/bt_sinhan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="20dp"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:onClick="@{() -> send4.pickSinhan()}"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                app:srcCompat="@drawable/shinhanxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="신한" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bt_suhyup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:onClick="@{() -> send4.pickSuhyup()}"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                app:srcCompat="@drawable/fishxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="수협" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/bt_hana"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/send4_bg"
+                            android:onClick="@{() -> send4.pickHana()}"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                app:srcCompat="@drawable/hanaxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:text="하나"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bt_ibk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:onClick="@{() -> send4.pickIbk()}"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                app:srcCompat="@drawable/ibkxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="IBK기업" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/bt_kakao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
+                            android:orientation="vertical"
+                            android:layout_marginRight="20dp"
+                            android:onClick="@{() -> send4.pickKakao()}"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                app:srcCompat="@drawable/kakaoxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="카카오뱅크" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bt_kb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:onClick="@{() -> send4.pickKb()}"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                app:srcCompat="@drawable/kbxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="KB국민" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/bt_nh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
+                            android:orientation="vertical"
+                            android:layout_marginRight="20dp"
+                            android:onClick="@{() -> send4.pickNh()}"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                app:srcCompat="@drawable/nh_1xhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="NH농협" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bt_epost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:onClick="@{() -> send4.pickEpost()}"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                app:srcCompat="@drawable/postofficexhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="우체국" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/bt_kfcc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
+                            android:orientation="vertical"
+                            android:layout_marginRight="20dp"
+                            android:onClick="@{() -> send4.pickKfcc()}"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                app:srcCompat="@drawable/saemaeulxhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="새마을" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bt_uri"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            android:paddingBottom="25dp"
+                            android:orientation="vertical"
+                            android:onClick="@{() -> send4.pickUri()}"
+                            android:gravity="center"
+                            android:background="@drawable/send4_bg">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                app:srcCompat="@drawable/urixhdpi" />
+
+                            <TextView
+                                style="@style/textHeadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:text="우리" />
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                style="@style/textHeadline2"
+                android:textColor="@color/black"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/setcheck_cancel"
+                android:drawablePadding="-30dp"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@drawable/ic_backspace_black_32"
+                android:text="뒤로" />
+
+            <Button
+                android:id="@+id/bt_next"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                style="@style/textHeadline2"
+                android:textColor="@color/white"
+                android:background="@drawable/setcheck_main"
+                android:drawablePadding="-30dp"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@drawable/ic_check_circle_white_32"
+                android:text="계속" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.storeInfo.StoreList">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal"
+        android:background="@drawable/send1_bg">
+
+        <ImageView
+            android:id="@+id/storeImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            app:srcCompat="@drawable/hanaxhdpi" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textBody16"
+                android:id="@+id/tv_account_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/gray8_text"
+                android:text="계좌 이름" />
+
+            <TextView
+                style="@style/textHeadline2"
+                android:id="@+id/tv_account_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textColor="#616161"
+                android:text="잔액" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

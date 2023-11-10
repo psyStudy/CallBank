@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textHeadline2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="상대방 계좌로 입금한 뒤에는"
+                android:layout_marginBottom="-5dp"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                style="@style/textHeadline2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="취소할 수 없습니다"
+                android:layout_marginBottom="-5dp"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="-5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textHeadline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="맞으면" />
+
+                <TextView
+                    style="@style/textHeadline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_green"
+                    android:text=" 계속" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textHeadline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="틀리면" />
+
+                <TextView
+                    style="@style/textHeadline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/emphasize_alert"
+                    android:text=" 취소" />
+
+                <TextView
+                    style="@style/textHeadline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="를 눌러주세요" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box3"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:padding="25dp"
+            android:layout_marginBottom="16dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/textHeadline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="입금 은행"
+                    android:layout_weight="1"
+                    android:textColor="@color/gray8_text" />
+
+                <TextView
+                    style="@style/textHeadline3"
+                    android:id="@+id/tv_bank_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="신한"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="17dp">
+
+                <TextView
+                    style="@style/textHeadline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="계좌 번호"
+                    android:layout_weight="1"
+                    android:textColor="@color/gray8_text" />
+
+                <TextView
+                    style="@style/textHeadline3"
+                    android:id="@+id/tv_account_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="064121181983"
+                    android:layout_weight="3"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="17dp">
+
+                <TextView
+                    style="@style/textHeadline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="받으실 분"
+                    android:layout_weight="1"
+                    android:textColor="@color/gray8_text" />
+
+                <TextView
+                    style="@style/textHeadline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="홍길동"
+                    android:layout_weight="3"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="17dp">
+
+                <TextView
+                    style="@style/textHeadline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="금액"
+                    android:layout_weight="1"
+                    android:textColor="@color/gray8_text" />
+
+                <TextView
+                    style="@style/textHeadline3"
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000000원"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="17dp">
+
+                <TextView
+                    style="@style/textHeadline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="수수료"
+                    android:layout_weight="1"
+                    android:textColor="@color/gray8_text" />
+
+                <TextView
+                    style="@style/textHeadline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="500원"
+                    android:layout_weight="3"
+                    android:textColor="@color/black" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                style="@style/textHeadline2"
+                android:textColor="@color/black"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/setcheck_cancel"
+                android:drawablePadding="-30dp"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@drawable/ic_backspace_black_32"
+                android:text="뒤로" />
+
+            <Button
+                android:id="@+id/bt_next"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                style="@style/textHeadline2"
+                android:textColor="@color/white"
+                android:background="@drawable/setcheck_main"
+                android:drawablePadding="-30dp"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@drawable/ic_check_circle_white_32"
+                android:text="계속" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

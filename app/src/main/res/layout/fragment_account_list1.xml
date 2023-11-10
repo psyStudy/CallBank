@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/textHeadline0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내 통장 목록"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        style="@style/textBody20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="통장을 누르면\n더 자세한 내역을\n확인할 수 있어요"
+        android:textAlignment="center"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="400dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical" >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bank_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                tools:listitem="@layout/account_item_2" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_back"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        style="@style/textHeadline2"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/setcheck_cancel"
+        android:drawablePadding="-110dp"
+        android:paddingLeft="110dp"
+        android:drawableLeft="@drawable/ic_backspace_black_32"
+        android:text="뒤로" />
+</LinearLayout>

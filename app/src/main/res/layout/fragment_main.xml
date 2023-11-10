@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/ic_mic"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_vector_mic_button" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="음성 도움이 필요하다면 여기를 눌러주세요"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+
+
+        <android.widget.Button
+            android:id="@+id/bt_send"
+            style="@style/textHeadline0"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/setcheck_main"
+            android:text="돈 보내기"
+            android:paddingLeft="60dp"
+            android:drawableLeft="@drawable/ic_money_white_48"
+            android:drawablePadding="-90dp"
+            android:textColor="@color/white" />
+
+        <android.widget.Button
+            android:id="@+id/bt_show"
+            style="@style/textHeadline0"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/setcheck_main"
+            android:paddingLeft="70dp"
+            android:drawableLeft="@drawable/ic_account_balance_wallet_white_48"
+            android:drawablePadding="-60dp"
+            android:text="내 통장 보기"
+            android:textColor="@color/white" />
+
+        <android.widget.Button
+            android:id="@+id/bt_map"
+            style="@style/textHeadline0"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/setcheck_main"
+            android:paddingLeft="70dp"
+            android:drawableLeft="@drawable/ic_pin_drop_white_48"
+            android:drawablePadding="-100dp"
+            android:text="은행 위치"
+            android:textColor="@color/white" />
+
+        <android.widget.Button
+            android:id="@+id/bt_note"
+            style="@style/textHeadline0"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/setcheck_main"
+            android:paddingLeft="70dp"
+            android:drawableLeft="@drawable/ic_savings_white_48"
+            android:drawablePadding="-100dp"
+            android:text="내 가계부"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</layout>

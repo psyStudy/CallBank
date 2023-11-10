@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/joins2"
+            style="@style/textHeadline1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:lineSpacingExtra="-7dp"
+            android:text="아래의 번호로\n돈을 보낸 내역이\n전송됩니다"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_pro_name"
+            style="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/box"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
+            android:hint="수신인의 이름을 적어주세요">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/transparent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_pro_tel"
+            style="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/box"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
+            android:hint="전화번호를 적어주세요">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/transparent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <android.widget.Button
+            android:id="@+id/bt_pass"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="넘어가기"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            style="@style/textHeadline2"
+            android:layout_marginBottom="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:orientation="horizontal">
+
+            <android.widget.Button
+                android:id="@+id/bt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                style="@style/textHeadline2"
+                android:textColor="@color/black"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/setcheck_cancel"
+                android:drawablePadding="-30dp"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@drawable/ic_backspace_black_32"
+                android:text="뒤로" />
+
+            <android.widget.Button
+                android:id="@+id/bt_next"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                style="@style/textHeadline2"
+                android:textColor="@color/white"
+                android:background="@drawable/setcheck_main"
+                android:drawablePadding="-30dp"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@drawable/ic_check_circle_white_32"
+                android:text="계속" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

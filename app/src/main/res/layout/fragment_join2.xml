@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <TextView
+            style="@style/textHeadline1"
+            android:id="@+id/signup1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="반갑습니다"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/signup2"
+            style="@style/textHeadline2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:lineSpacingExtra="-5dp"
+            android:gravity="center"
+            android:text="아래의 설명을 따라\n회원 가입을 진행해주세요"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_name"
+            style="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="10dp"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
+            android:background="@drawable/box"
+            android:hint="이름을 적어주세요">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_tel"
+            style="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="10dp"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
+            android:background="@drawable/box"
+            android:hint="전화번호를 적어주세요">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/transparent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_birth"
+            style="@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            android:textColorHint="@color/gray8_text"
+            android:background="@drawable/box"
+            android:hint="생년월일을 적어주세요(8자리)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/transparent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:orientation="horizontal">
+
+            <android.widget.Button
+                android:id="@+id/bt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                style="@style/textHeadline2"
+                android:textColor="@color/black"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/setcheck_cancel"
+                android:drawablePadding="-30dp"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@drawable/ic_backspace_black_32"
+                android:text="뒤로" />
+
+            <android.widget.Button
+                android:id="@+id/bt_next"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                style="@style/textHeadline2"
+                android:textColor="@color/white"
+                android:background="@drawable/setcheck_main"
+                android:drawablePadding="-30dp"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@drawable/ic_check_circle_white_32"
+                android:text="계속" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
